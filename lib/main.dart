@@ -466,7 +466,7 @@ class _HomePageState extends State<HomePage> {
         providerBundleIdentifier: _isIOS
             ? _iosProviderBundleId
             : (Platform.isMacOS
-                  ? 'space.iscreation.vkpn.PacketTunnelProvider'
+                  ? _iosProviderBundleId
                   : ''),
       );
       setState(() {

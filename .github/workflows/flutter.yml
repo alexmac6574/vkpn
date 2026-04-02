@@ -262,6 +262,12 @@ jobs:
       - name: Получение зависимостей
         run: flutter pub get
 
+      - name: Настройка Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: macos/WireGuardKitGo/go.mod
+          cache-dependency-path: macos/WireGuardKitGo/go.sum
+
       - name: Подготовка Flutter macOS конфигурации
         run: flutter build macos --"$BUILD_MODE" --config-only
 
